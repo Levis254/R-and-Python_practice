@@ -15,3 +15,9 @@ library(ggmap)
 register_google(key=API_key)
 ```
 
+```{r}
+map<-get_map(location=c(24.878663, 79.871068), maptype = "satellite", zoom=4)
+sval<-ggmap(map)
+sval
+```
+
