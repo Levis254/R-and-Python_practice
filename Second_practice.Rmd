@@ -20,6 +20,8 @@ summary(model)
 ```
 
 
+y=4.30660+(0.40892*Petal.Length)
+
 ```{r}
 #	Calculate residuals and fitted values.
 fitted_values <- fitted(model)  # Fitted values
@@ -39,11 +41,18 @@ plot(fitted_values, residuals,
 qqnorm(residuals)
 qqline(residuals, col = "red")
 ```
-
+The residuals follow a normal distribution which satisfies the linear regression assumptions.
 
 ```{r}
 # Do a Shapiro-Wilk test of the residuals.
 shapiro_test <- shapiro.test(residuals)
 shapiro_test
 ```
+The shapiro wilk normality test also shows that the residuals are following a normal distribution. 
 
+```{r}
+install.packages("lmtest")
+library(lmtest)
+bptest(model)
+```
+There is no strong indication that the variance of the residuals in the regression model varies systematically with the predictor variable.
