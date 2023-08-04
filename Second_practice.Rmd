@@ -1,0 +1,49 @@
+---
+title: "Response"
+output: html_document
+date: "2023-08-04"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+attach(iris)
+```
+
+
+```{r}
+model<-lm(Sepal.Length~Petal.Length)
+
+summary(model)
+```
+
+
+```{r}
+#	Calculate residuals and fitted values.
+fitted_values <- fitted(model)  # Fitted values
+
+
+residuals <- residuals(model)  # Residuals
+
+```
+
+
+```{r}
+#	Plot the residuals vs. the fitted values.
+plot(fitted_values, residuals,
+     xlab = "Fitted Values", ylab = "Residuals",
+     main = "Residual Plot", pch = 16)
+#	Make a normal probability plot of the residuals.
+qqnorm(residuals)
+qqline(residuals, col = "red")
+```
+
+
+```{r}
+# Do a Shapiro-Wilk test of the residuals.
+shapiro_test <- shapiro.test(residuals)
+shapiro_test
+```
+
