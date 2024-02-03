@@ -1,6 +1,6 @@
 names=[]
 with open("names.txt", "w+") as file:
-    for _ in range(3):
+    for _ in range(4):
         name=input("Enter your name:")
         file.write(f"{name}\n")
         names.append(name)
