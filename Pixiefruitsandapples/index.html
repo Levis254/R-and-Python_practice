@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Agape Farm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Agape Farm</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Our Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Pixie Oranges and Apples Farm. We are committed to providing the freshest and highest quality oranges and apples straight from our farm to your table.</p>
+        <!-- Add more details about your farm here -->
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product">
+            <img src="orange.jpeg" alt="Pixie Orange">
+            <h3>Pixie Oranges</h3>
+            <p>Price: $1.00 per piece</p>
+            <label for="orangeQuantity">Quantity:</label>
+            <input type="number" id="orangeQuantity" value="0" min="0">
+            <button onclick="calculateTotal()">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="apple.jpg" alt="Pixie Apple">
+            <h3>Pixie Apples</h3>
+            <p>Price: $1.50 per piece</p>
+            <label for="appleQuantity">Quantity:</label>
+            <input type="number" id="appleQuantity" value="0" min="0">
+            <button onclick="calculateTotal()">Add to Cart</button>
+        </div>
+        <!-- Add more products as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries or orders, please contact us at:</p>
+        <address>
+            Pixie Oranges and Apples Farm<br>
+            123 Farm Lane<br>
+            Orchard City, CA 12345<br>
+            Phone: 123-456-7890<br>
+            Email: info@pixiefarm.com
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pixie Oranges and Apples Farm. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
